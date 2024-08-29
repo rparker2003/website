@@ -1,0 +1,7 @@
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* eventially turn off */
+  background-color: #181a1b;
+}

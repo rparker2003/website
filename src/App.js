@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+import './App.css'
+
+import Sidebar from './components/Sidebar/Sidebar'
+import Content from './components/Content/Content'
+
+const App = () => {
+  const [currentTab, setCurrentTab] = useState('home')
+
+  // all component to be rendered in the ap
+  // if component does not exit, it will error
+  const tabs = [
+    { key: 'home', icon: 'fas fa-home', label: 'Home' },
+    { key: 'about', icon: 'fas fa-user', label: 'About' },
+    { key: 'skills', icon: 'fas fa-code', label: 'Skills' },
+    { key: 'resume', icon: 'fas fa-file', label: 'Resume' }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <Sidebar tabs={tabs} currentTab={currentTab} />
+      <Content tabs={tabs} setCurrentTab={setCurrentTab} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

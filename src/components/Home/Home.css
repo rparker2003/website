@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+}
+
+/* .home h1 { */
+/*   font-size: 4rem; */
+/* } */

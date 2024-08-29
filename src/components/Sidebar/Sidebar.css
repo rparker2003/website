@@ -1,0 +1,85 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background-color: #040b14;
+  color: #f4f4f4;
+  padding: 15px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid #2c2f3f;
+  overflow: hidden;
+  margin: 15px auto;
+  background: url("../../assets/img/profile-img.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.sidebar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sidebar-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.sidebar-social-icon {
+  color: #f4f4f4;
+  font-size: 30px;
+  transition:
+    color 0.1s,
+    transform 0.1s;
+}
+
+.sidebar-social-icon:hover {
+  color: #149ddd;
+  transform: scale(1.1);
+}
+
+.sidebar-tabs button {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding: 8px 15px;
+  background-color: transparent;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #f4f4f4;
+}
+
+.sidebar-tabs button i {
+  margin-right: 10px;
+  font-size: 20px;
+  transition:
+    color 0.3s,
+    text-shadow 0.3s;
+}
+
+.sidebar-tabs button:hover i,
+.sidebar-tabs button.active i {
+  color: #149ddd; /* Glowing color for hover and active */
+  text-shadow: 0 0 8px rgba(20, 157, 221, 0.8); /* Glowing effect */
+}
