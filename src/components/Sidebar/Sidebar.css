@@ -2,10 +2,16 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: 300px;
   background-color: #040b14;
   color: #f4f4f4;
-  padding: 15px;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.sidebar-hidden {
+  position: absolute;
+  transform: translateX(-300px);
 }
 
 .sidebar-header {

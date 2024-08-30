@@ -55,6 +55,7 @@ const Content = ({ tabs, setCurrentTab }) => {
   return (
     <div className="content">
       <div className="content-background" />
+      <div className="content-background-dimmer" />
       <div className="content-foreground" >
         {tabs.map((tab) => {
           const Component = components[tab.key] || (() => <div>Loading...</div>)

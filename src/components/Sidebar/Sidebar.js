@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Sidebar.css'
 
 const Sidebar = ({ tabs, currentTab }) => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsVisible(window.innerWidth > 1100)
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   const handleClick = (tabKey) => {
     const element = document.querySelector(`[data-key="${tabKey}"]`)
     if (element) {
@@ -13,7 +29,7 @@ const Sidebar = ({ tabs, currentTab }) => {
   }
 
   return (
-    <div className="sidebar" data-aos="fade-in">
+    <div className={`sidebar ${isVisible ? '' : 'sidebar-hidden'}`} data-aos="fade-in">
       <div className="sidebar-header">
         <div className="sidebar-icon" />
         <div className="sidebar-name">Ryan Parker</div>
