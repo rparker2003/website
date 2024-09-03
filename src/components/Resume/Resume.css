@@ -1,7 +1,66 @@
 .resume {
+  display: block;
+  background-color: #131516;
+  padding: 30px 0;
+  color: white;
+}
+
+.resume-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #9ac5ea;
+}
+
+.resume-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* eventially turn off */
-  background-color: #181a1b;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.resume-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.resume-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.resume-item {
+  margin-bottom: 20px;
+}
+
+.resume-item h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resume-item h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.resume-item p,
+.resume-item ul {
+  margin-top: 5px;
+}
+
+.resume-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-item ul li {
+  margin-bottom: 5px;
+}
+
+.resume-item p em,
+.resume-item ul li em {
+  font-style: italic;
 }
