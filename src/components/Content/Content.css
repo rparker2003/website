@@ -4,6 +4,19 @@
   color: #f4f4f4;
 }
 
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .content-background {
   position: fixed;
   left: 0;
