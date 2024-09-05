@@ -82,7 +82,7 @@
 }
 
 ul {
-  list-style-type: disc; /* Adds bullets */
-  padding-left: 20px; /* Indentation for the bullets */
-  margin: 0; /* Optional: Remove default margin */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
 }

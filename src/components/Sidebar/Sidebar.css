@@ -85,6 +85,6 @@
 
 .sidebar-tabs button:hover i,
 .sidebar-tabs button.active i {
-  color: #149ddd; /* Glowing color for hover and active */
-  text-shadow: 0 0 8px rgba(20, 157, 221, 0.8); /* Glowing effect */
+  color: #149ddd;
+  text-shadow: 0 0 8px rgba(20, 157, 221, 0.8);
 }
