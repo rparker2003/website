@@ -6,6 +6,7 @@ const Content = ({ tabs, setCurrentTab }) => {
   const sectionRefs = useRef({})
 
 
+  // load components on initial render (tabs will never change)
   useEffect(() => {
     (async () => {
       const loadedCompenents = {}
@@ -16,6 +17,7 @@ const Content = ({ tabs, setCurrentTab }) => {
     })()
   }, [tabs])
 
+  // observer that tracks scroll position and updates current tab for sidebar
   useEffect(() => {
     if (components !== null) {
       const observer = new IntersectionObserver(
@@ -54,8 +56,9 @@ const Content = ({ tabs, setCurrentTab }) => {
 
   return (
     <div className="content">
-      <div className="content-background" />
-      <div className="content-background-dimmer" />
+      <div className="content-background" >
+        <div className="content-background-dimmer" />
+      </div>
       <div className="content-foreground" >
         {tabs.map((tab) => {
           const Component = components[tab.key] || (() => <div>Loading...</div>)

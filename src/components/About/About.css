@@ -1,44 +1,67 @@
 .about {
-  display: block;
-  /* height: 100vh; /* eventially turn off */
+  display: flex;
   background-color: #131516;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.about-container {
+  max-width: 1250px;
+  margin: auto;
 }
 
 .about-title h2 {
   font-size: 32px;
-  font-weight: bold;
   color: #9ac5ea;
+  padding-bottom: 20px;
 }
 
-.about-content {
+.about-title h2::after {
+  content: "";
   display: block;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 50px;
+  height: 3px;
+  background-color: #117eaf;
   margin-top: 20px;
 }
 
+.about-content {
+  display: flex;
+}
+
 .about-image {
-  width: 600px;
-  height: 600px;
+  height: 404px;
+  width: 404px;
   background: url("../../assets/img/profile-img.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .about-info {
-  max-wdith: 700px;
+  flex: 1;
+  padding-left: 20px;
 }
 
 .about-info h3 {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 28px;
   color: #9ac5ea;
+  margin: 0;
 }
-.info-section {
-  display: block;
+
+.about-info-list {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.about-info-list li {
+  width: 48%;
+}
+
+.about-info-list i {
+  padding-right: 5px;
+  color: #1d92e7;
 }
 
 ul {
@@ -47,10 +70,10 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.info-label {
+.about-info-label {
   font-weight: bold;
   margin-right: 10px;
 }
@@ -58,4 +81,8 @@ ul li {
 p {
   color: #ccc;
   line-height: 1.6;
+}
+
+.about-info-description {
+  margin: 0;
 }

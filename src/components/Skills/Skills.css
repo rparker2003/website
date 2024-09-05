@@ -1,27 +1,36 @@
 .skills {
-  display: block;
+  display: flex;
   background-color: #17191a;
-  padding: 30px 0;
-  color: white;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.skills-container {
+  max-width: 1250px;
+  margin: auto;
 }
 
 .skills-title h2 {
   font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
   color: #9ac5ea;
 }
 
+.skills-title h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #117eaf;
+  margin-top: 20px;
+}
+
 .skills-title p {
-  text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .skills-content {
+  text-transform: uppercase;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -44,7 +53,6 @@
 .progress-bar-wrap {
   background: #2c2f3f;
   border-radius: 50px;
-  overflow: hidden;
 }
 
 .progress-bar {
